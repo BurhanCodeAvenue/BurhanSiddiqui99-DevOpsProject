@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Theme - ChatterBox Palette */
+    --background: 210 20% 98%; /* Lighter gray for background */
+    --foreground: 240 10% 3.9%; /* Dark text */
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 240 10% 3.9%; /* Dark text on cards */
+    --popover: 0 0% 100%; /* White popovers */
+    --popover-foreground: 240 10% 3.9%; /* Dark text on popovers */
+    --primary: 180 100% 25%; /* Teal */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+    --secondary: 0 0% 94.1%; /* Light gray */
+    --secondary-foreground: 240 10% 3.9%; /* Dark text on secondary */
+    --muted: 0 0% 96.1%; /* Slightly darker light gray */
+    --muted-foreground: 240 5% 64.9%; /* Medium gray text */
+    --accent: 16 100% 66%; /* Coral */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+    --destructive: 0 84.2% 60.2%; /* Default destructive */
+    --destructive-foreground: 0 0% 98%; /* Default destructive text */
+    --border: 0 0% 89.8%; /* Light gray border */
+    --input: 0 0% 89.8%; /* Light gray input border */
+    --ring: 180 100% 35%; /* Teal for focus rings */
+    --chart-1: 180 70% 45%; /* Teal shade 1 */
+    --chart-2: 16 80% 60%; /* Coral shade 1 */
+    --chart-3: 210 30% 70%; /* Light blue-gray */
+    --chart-4: 40 90% 70%; /* Soft yellow */
+    --chart-5: 300 40% 70%; /* Soft purple */
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%; /* Light gray sidebar background */
+    --sidebar-foreground: 240 10% 3.9%; /* Dark sidebar text */
+    --sidebar-primary: 180 100% 25%; /* Teal sidebar primary */
+    --sidebar-primary-foreground: 0 0% 100%; /* White sidebar primary text */
+    --sidebar-accent: 16 100% 66%; /* Coral sidebar accent */
+    --sidebar-accent-foreground: 0 0% 100%; /* White sidebar accent text */
+    --sidebar-border: 0 0% 89.8%; /* Light gray sidebar border */
+    --sidebar-ring: 180 100% 35%; /* Teal sidebar ring */
+  }
+
+  .dark {
+    /* Dark Theme - ChatterBox Palette */
+    --background: 240 10% 3.9%; /* Dark background */
+    --foreground: 0 0% 98%; /* Light text */
+    --card: 240 10% 10%; /* Darker card */
+    --card-foreground: 0 0% 98%; /* Light text on cards */
+    --popover: 240 10% 3.9%; /* Dark popover */
+    --popover-foreground: 0 0% 98%; /* Light text on popovers */
+    --primary: 180 80% 55%; /* Brighter Teal */
+    --primary-foreground: 240 10% 3.9%; /* Dark text on primary */
+    --secondary: 240 5% 14.9%; /* Dark gray */
+    --secondary-foreground: 0 0% 98%; /* Light text on secondary */
+    --muted: 240 5% 14.9%; /* Dark gray muted */
+    --muted-foreground: 0 0% 63.9%; /* Lighter gray text */
+    --accent: 16 90% 70%; /* Brighter Coral */
+    --accent-foreground: 240 10% 3.9%; /* Dark text on accent */
+    --destructive: 0 62.8% 40.6%; /* Darker destructive */
+    --destructive-foreground: 0 0% 98%; /* Light destructive text */
+    --border: 240 5% 14.9%; /* Dark gray border */
+    --input: 240 5% 14.9%; /* Dark gray input border */
+    --ring: 180 80% 65%; /* Brighter Teal for focus rings */
+    --chart-1: 180 70% 60%; /* Teal shade 1 (dark) */
+    --chart-2: 16 80% 70%; /* Coral shade 1 (dark) */
+    --chart-3: 210 30% 50%; /* Medium blue-gray */
+    --chart-4: 40 90% 60%; /* Medium yellow */
+    --chart-5: 300 40% 60%; /* Medium purple */
+    --sidebar-background: 240 10% 10%; /* Darker sidebar background */
+    --sidebar-foreground: 0 0% 98%; /* Light sidebar text */
+    --sidebar-primary: 180 80% 55%; /* Brighter Teal sidebar primary */
+    --sidebar-primary-foreground: 240 10% 3.9%; /* Dark sidebar primary text */
+    --sidebar-accent: 16 90% 70%; /* Brighter Coral sidebar accent */
+    --sidebar-accent-foreground: 240 10% 3.9%; /* Dark sidebar accent text */
+    --sidebar-border: 240 5% 14.9%; /* Dark gray sidebar border */
+    --sidebar-ring: 180 80% 65%; /* Brighter Teal sidebar ring */
+  }
+
+  /* Apply base styles to the body */
+  body {
+    /* Removed @apply bg-background text-foreground; */
+    font-family: sans-serif; /* Use a clean sans-serif font */
+  }
+
+  /* Apply border color using Tailwind's default border utility */
+  /* This ensures components using `border` class get the theme color */
+   * {
+    border-color: hsl(var(--border));
+   }
+}

@@ -1,0 +1,57 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# Testing
+/coverage
+
+# Next.js build files
+/.next/
+/out/
+
+# Production
+/build
+
+# Misc
+.DS_Store
+*.pem
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Local Environment Variables
+.env*.local
+.env # Add .env file to prevent committing secrets
+
+# IDE files
+.idea
+.project
+.settings
+.vscode/settings.json # Exclude local VSCode settings if desired, keep if project-specific settings are needed
+
+# Temp files
+*.swp
+*~
+
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+# Firebase service account key (if storing directly, which is NOT recommended)
+# *.json # Uncomment if you might accidentally save the key file in the project root
+
+# Turbopack
+.turbo
+
+# Genkit (ensure sensitive state isn't committed)
+.genkit/
